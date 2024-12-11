@@ -1,0 +1,42 @@
+/* This stylesheet should include:
+At least four style definitions (it is possible you will have many more than four styles)
+Styles that specify font color
+Styles that specify font family
+At least three divs for positioning and styling blocks of content in the HTML page */
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(55, 0, 132);
+    background-color: rgb(198, 157, 255);
+}
+
+li {
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
+
+a {
+    color: maroon;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {color: blue;}
+
+.resumeListheading {
+    font-weight: bold;
+    font-style: normal;
+}
+.underline {text-decoration: underline;}
+.bold {font-weight: bold;}
+.justify {text-align: justify;}
+
+.spacing {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}

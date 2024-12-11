@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Acts of Service Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .result span {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Acts of Service Generator</h1>
+    <p>Click the button to get a random act of service idea for someone!</p>
+
+    <button onclick="generateIdea()">Generate Idea</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        // Arrays for types of people and acts of service
+        const people = [
+            "Family member", "Coworker", "Friend", "Neighbor", "Spouse", 
+            "Parent", "Child", "Siblings", "Teacher", "Boss",
+            "Relative", "Mentor", "Employee", "Boss", "Roommate",
+            "Teammate", "Client", "Customer", "Acquaintance", "Classmate", 
+            "In-law", "Grandparent", "Grandchild", "Church member", "Fellow student",
+            "Volunteer", "Pet owner", "Homeless person", "Healthcare worker", "Stranger",
+            "Artist"
+        ];
+
+        const actsOfService = [
+            "Help with household chores", "Cook a meal", "Offer to babysit", "Write a kind note", 
+            "Pick up groceries", "Do a random errand", "Offer a ride", "Take care of their pet", 
+            "Give them a thoughtful gift", "Organize their space", "Help with a project", 
+            "Give a heartfelt compliment", "Help with yard work", "Spend quality time together", 
+            "Run an important errand", "Give a massage", "Support them emotionally", "Bring them coffee", 
+            "Share an uplifting book or podcast", "Send a care package", "Offer to clean their car", 
+            "Take them to an event", "Make their favorite dessert", "Assist with homework", 
+            "Offer technical help", "Help with moving", "Create a playlist for them", 
+            "Help them plan an event", "Volunteer for a cause they care about", 
+            "Prepare a homemade gift", "Lend them your tools", "Offer a listening ear", 
+            "Offer to share your skills (e.g., tutoring, DIY)", "Do their laundry", 
+            "Give them a hug", "Make a donation in their name", "Plan a surprise for them", 
+            "Help organize their schedule", "Offer to take their shift", "Walk their dog", 
+            "Support their hobbies", "Offer to do a tedious task for them", "Mow their lawn", 
+            "Offer a ride to work", "Help them clean up after a party", "Babysit their kids", 
+            "Run errands for them", "Leave a positive comment on their social media", 
+            "Share a meaningful memory with them", "Send them a helpful article", 
+            "Provide them with a resource they need", "Write them a thank-you letter", 
+            "Host a game night", "Offer to help them unpack", "Take care of their plants", 
+            "Give them a journal or planner", "Surprise them with a home-cooked dinner", 
+            "Bring them lunch at work", "Plan a weekend getaway for them", "Take photos of them", 
+            "Give them a book you think they'd enjoy", "Run a special errand for them", 
+            "Host a self-care day for them", "Help with their pet's grooming", 
+            "Do their grocery shopping", "Help them with DIY projects", "Make them breakfast", 
+            "Help them with taxes or paperwork", "Leave a kind note on their desk", 
+            "Create a vision board together", "Share a healthy recipe", "Gift them a memory jar", 
+            "Introduce them to new music or podcasts", "Share a funny story", 
+            "Offer to help them clean their house", "Take a class together", 
+            "Offer them a seat in a crowded area", "Take them to their doctor's appointment", 
+            "Offer your expertise on a topic they're interested in", "Provide a motivational quote", 
+            "Lend them a hand with a new skill", "Bring them a homemade candle", 
+            "Make them a personalized gift", "Offer to walk them through a stressful task", 
+            "Help them decorate their space", "Send them a motivational text", 
+            "Write a poem or song for them", "Send them an inspirational video", 
+            "Share a self-care tip with them", "Organize a virtual meetup", 
+            "Give them a subscription to a service they’d like", "Host a movie night", 
+            "Offer to water their plants", "Give them a homemade card", 
+            "Write them an appreciation letter", "Leave a positive review for their business", 
+            "Offer to help them with online work", "Send them a surprise gift", 
+            "Help them with personal branding", "Take a workout class together", 
+            "Give them a thoughtful compliment on their appearance", "Help them prepare for an interview"
+        ];
+
+        // Function to generate a random act of service idea
+        function generateIdea() {
+            const person = people[Math.floor(Math.random() * people.length)];
+            const act = actsOfService[Math.floor(Math.random() * actsOfService.length)];
+            document.getElementById('result').innerHTML = `For a <span>${person}</span>: ${act}`;
+        }
+    </script>
+
+</body>
+</html>
